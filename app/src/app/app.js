@@ -7,10 +7,12 @@
         'appName.services',
         'appName.config',
         'appName.directives',
+		'appName.errors',
         'ui.router',
         'ui.bootstrap',
         'common.services',
-        'common.directives'
+        'common.directives',
+        'http-auth-interceptor'
     ]);
 
     app.filter("dateFilter", function ($filter) {
@@ -20,7 +22,7 @@
     });
 
     app.config( function myAppConfig ( $locationProvider,$stateProvider, $urlRouterProvider,HateoasInterceptorProvider ) {
-        $urlRouterProvider.otherwise( '/home' );
+        $urlRouterProvider.when('','/home').otherwise('/error/404');
         HateoasInterceptorProvider.transformAllResponses();
         // $locationProvider.html5Mode({
         //     enabled: true,
@@ -44,7 +46,7 @@
         // CAMBIAR EL TITULO
         $transitions.onEnter({}, function( $transition$) {
             if ( angular.isDefined( $transition$.to().data.pageTitle ) ) {
-                scope.pageTitle = $transition$.to().data.pageTitle + ' | Tasking' ;
+                scope.pageTitle = $transition$.to().data.pageTitle + ' | appName' ;
             }
         });
    

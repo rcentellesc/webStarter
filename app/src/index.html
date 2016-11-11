@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="tasking" ng-controller="AppCtrl as appCtrl">
+<html ng-app="appName" ng-controller="AppCtrl as appCtrl">
   <head>
     <title ng-bind="appCtrl.pageTitle"></title>
 
     <meta charset="utf-8"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- font awesome from BootstrapCDN -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
