@@ -66,11 +66,22 @@ module.exports = {
       'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-resource/angular-resource.min.js',
-      'vendor/angular-sanitize/angular-sanitize.min.js'
+      'vendor/angular-sanitize/angular-sanitize.min.js',
+      'vendor/angular-http-auth/src/http-auth-interceptor.js',
+      'vendor/angular-smart-table/src/angular-smart.module.js'
+    ],
+    css: [
+    ],
     ],
     css: [
     ],
     assets: [
-    ]
+    ],
+   fonts:[
+		'vendor/bootstrap/fonts/glyphicons-halflings-regular.eot',
+		'vendor/bootstrap/fonts/glyphicons-halflings-regular.svg',
+		'vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf',
+		'vendor/bootstrap/fonts/glyphicons-halflings-regular.woff'
+	]
   },
 };
